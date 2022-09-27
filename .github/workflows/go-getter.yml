@@ -60,13 +60,13 @@ jobs:
                 go install gotest.tools/gotestsum@v1.8.2
             fi
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-east-1
-          role-to-assume: arn:aws:iam::388664967494:role/hc-go-getter-test
-          role-session-name: ${{ github.run_id }}
-          audience: https://github.com/hashicorp
+      # - name: Configure AWS Credentials
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+      #     aws-region: us-east-1
+      #     role-to-assume: arn:aws:iam::388664967494:role/hc-go-getter-test
+      #     role-session-name: ${{ github.run_id }}
+      #     audience: https://github.com/hashicorp
 
       - name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v0.4.0'
@@ -131,13 +131,13 @@ jobs:
               go install gotest.tools/gotestsum@v1.8.2
           fi 
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-east-1
-          role-to-assume: arn:aws:iam::388664967494:role/hc-go-getter-test
-          role-session-name: ${{ github.run_id }}
-          audience: https://github.com/hashicorp
+      # - name: Configure AWS Credentials
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+      #     aws-region: us-east-1
+      #     role-to-assume: arn:aws:iam::388664967494:role/hc-go-getter-test
+      #     role-session-name: ${{ github.run_id }}
+      #     audience: https://github.com/hashicorp
 
       - name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v0.4.0'
